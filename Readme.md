@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Dana Kovach](https://up.htmlacademy.ru/htmlcss/22/user/834173).
-* Наставник: [Екатерина Анплитова].
+* Наставник: [Екатерина Анплитова](https://htmlacademy.ru/profile/anplitova).
 
 ---
 
