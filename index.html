@@ -39,6 +39,7 @@
         <ul class="shop-menu">
             <li class="shop-menu-search"><a href="#" class="shop-menu-link">Поиск</a>
                 <section class="shop-menu-modal modal-search">
+                    <h2 class="visually-hidden">Форма поиска</h2>
                     <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
                         <label class="visually-hidden" for="form-search">Поиск</label>
                         <input type="search" name="search" id="form-search" placeholder="Что ищем?">
@@ -52,7 +53,7 @@
                         <h2 class="visually-hidden">Личный кабинет</h2>
                         <p>
                             <label class="visually-hidden" for="login-email">Адрес электронной почты</label>
-                            <input rype="email" name="email" id="login-email" value="" placeholder="Электронная почта">
+                            <input type="email" name="email" id="login-email" value="" placeholder="Электронная почта">
                         </p>
                         <p>
                             <label class="visually-hidden" for="login-password">Введите пароль</label>
@@ -96,16 +97,41 @@
             <ul class="catalog-list">
                 <li class="catalog-item">
                     <article class="product product-hit">
-                        <div class="product-image">
-                            <a href="#">
-                                <img src="img/product-1.jpg" width="200" height="200" alt="Сливочное мороженое">
-                            </a>
-                            <p class="product-price">310 <span>&#8381;/кг</span>
-                            </p>                            
-                        </div>
-                        <h3>
-                            <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-                        </h3>
+                        <a href="#">
+                            <div class="product-image">
+                                <img src="img/product-1.jpg" width="200" height="200" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                                <p class="product-price">310 <span>&#8381;/кг</span></p>                            
+                            </div>
+                            <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+                        </a>
+                        <div class="quick-view">
+                            <a href="#">Быстрый просмотр</a>
+                        </div>                    
+                    </article>
+                </li>
+                <li class="catalog-item">
+                    <article class="product product-hit">
+                        <a href="#">
+                            <div class="product-image">
+                                <img src="img/product-2.jpg" width="200" height="200" alt="Сливочно-кофейное с кусочками шоколада">
+                            <p class="product-price">380 <span>&#8381;/кг</span></p>                            
+                            </div>
+                            <h3>Сливочно-кофейное с кусочками шоколада</h3>
+                        </a>
+                        <div class="quick-view">
+                            <a href="#">Быстрый просмотр</a>
+                        </div>                    
+                    </article>
+                </li>
+                <li class="catalog-item">
+                    <article class="product product-hit">
+                        <a href="#">
+                            <div class="product-image">
+                                    <img src="img/product-3.jpg" width="200" height="200" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+                                <p class="product-price">355 <span>&#8381;/кг</span></p>                            
+                            </div>
+                            <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
+                        </a>
                         <div class="quick-view">
                             <a href="#">Быстрый просмотр</a>
                         </div>                        
@@ -113,53 +139,16 @@
                 </li>
                 <li class="catalog-item">
                     <article class="product product-hit">
-                        <div class="product-image">
-                            <a href="#">
-                                <img src="img/product-2.jpg" width="200" height="200" alt="Сливочно-кофейное мороженое">
-                            </a>
-                            <p class="product-price">380 <span>&#8381;/кг</span>
-                            </p>                            
-                        </div>
-                        <h3>
-                            <a href="#">Сливочно-кофейное с кусочками шоколада</a>
-                        </h3>
+                        <a href="#">
+                            <div class="product-image">
+                                <img src="img/product-4.jpg" width="200" height="200" alt="Сливочное крем-брюле с карамельной подливкой">
+                                <p class="product-price">415 <span>&#8381;/кг</span></p>                            
+                            </div>
+                            <h3>Сливочное крем-брюле с карамельной подливкой</h3>
+                        </a>
                         <div class="quick-view">
                             <a href="#">Быстрый просмотр</a>
-                        </div>                        
-                    </article>
-                </li>
-                <li class="catalog-item">
-                    <article class="product product-hit">
-                        <div class="product-image">
-                            <a href="#">
-                                <img src="img/product-3.jpg" width="200" height="200" alt="Сливочно-клубничное мороженое">
-                            </a>
-                            <p class="product-price">355 <span>&#8381;/кг</span>
-                            </p>                            
-                        </div>
-                        <h3>
-                            <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
-                        </h3>
-                        <div class="quick-view">
-                            <a href="#">Быстрый просмотр</a>
-                        </div>                        
-                    </article>
-                </li>
-                <li class="catalog-item">
-                    <article class="product product-hit">
-                        <div class="product-image">
-                            <a href="#">
-                                <img src="img/product-4.jpg" width="200" height="200" alt="Сливочное крем-брюле">
-                            </a>
-                            <p class="product-price">415 <span>&#8381;/кг</span>
-                            </p>                            
-                        </div>
-                        <h3>
-                            <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
-                        </h3>
-                        <div class="quick-view">
-                            <a href="#">Быстрый просмотр</a>
-                        </div>                        
+                        </div>                      
                     </article>
                 </li>
             </ul>
@@ -188,13 +177,16 @@
                 </h3>
             </article>
 
-            <form class="appointment">
+            <form action="https://echo.htmlacademy.ru" method="post" class="appointment">
                 <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-                <!--Здесь будет форма -->
+                <label for="appointment-email" class="visually-hidden">Ваша электронная почта:</label>
+                <input type="email" name="email" id="appointment-email" value="" placeholder="Электронная почта">
+                <button class="button" type="button">Отправить</button>
             </form>
 
-            <section class="modal modal-map">
+            <section class="map">
                 <h2 class="visually-hidden">Как до нас добраться</h2>
+                <img src="img/map.jpg" width="900" height="430" alt="Мы находимся по адрему ул. Большая Конюшенная 19/8, Санкт-Петербург">
                 <div class="contacts">
                     <p>Адрес главного офиса и офлайн-магазина:
                         <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
@@ -214,10 +206,10 @@
 
     <footer class="footer">
         <ul class="footer-social">
-            <li><a class="social-btn" href="#">Твиттер</a></li>
-            <li><a class="social-btn" href="#">Истаграм</a></li>
-            <li><a class="social-btn" href="#">Фейсбук</a></li>
-            <li><a class="social-btn" href="#">Вконтакте</a></li>
+            <li><a class="social-btn" href="#" aria-label="Читайте нас в Твиттере">Твиттер</a></li>
+            <li><a class="social-btn" href="#" aria-label="Читайте нас в Инстаграм">Истаграм</a></li>
+            <li><a class="social-btn" href="#" aria-label="Читайте нас в Фейсбук">Фейсбук</a></li>
+            <li><a class="social-btn" href="#" aria-label="Читайте нас в Вконтакте">Вконтакте</a></li>
         </ul>
         <ul class="footer-menu">
             <li>
@@ -243,8 +235,23 @@
       
       <section class="modal modal-feedback">
           <h2>Мы вам обязательно ответим!</h2>
-          <!--форма-->
-          <span class="modal-close">x</span>
+          <form action="https://echo.htmlacademy.ru" method="post" class="feedback-form">
+              <p>
+                  <label for="feedback-name" class="vusually-hidden">Введите ваше имя</label>
+                  <input type="text" name="name" id="feedback-name" value="" placeholder="Как вас зовут?">
+              </p>
+              <p>
+                  <label for="feedback-email"  class="vusually-hidden">Введите ваш E-mail</label>
+                  <input type="email" name="email" id="feedback-email" value="" placeholder="Ваша почта для ответа?">
+              </p>
+              <p>
+                  <label for="feedback-massage"  class="vusually-hidden">Введите ваше сообщение</label>
+                  <textarea name="message" id="feedback-massage" placeholder="Напишите нам что-нибудь...">
+                  </textarea>
+              </p>
+              <button class="button" type="button">Отправить</button>
+          </form>
+          <button class="modal-close" type="button">Закрыть</button>
       </section>
       
   </body>
