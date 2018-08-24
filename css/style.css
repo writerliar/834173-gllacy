@@ -81,6 +81,7 @@ a {
 
 .main-menu a {
     color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .main-menu {
@@ -94,6 +95,15 @@ a {
     background-color: #f8f7f4;
 }
 
+.main-menu-link:focus,
+.main-menu-link:active {
+    color: #000000;
+    
+    background-color: #f8f7f4;
+    
+    box-shadow: inset 0px 2px 1px 0px #696969;
+}
+
 .main-menu-modal {
     font-size: 14px;
     line-height: 16px;
@@ -104,16 +114,16 @@ a {
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
-.main-menu-modal a {
+.main-menu-modal a:not(.main-menu-current) {
     color: #000000;
 }
 
-.main-menu-modal a:hover {
+.main-menu-modal li:hover {
     background-color: #fbded7;
 }
 
-.main-menu-modal a:active,
-.main-menu-modal a:focus {
+.main-menu-modal li:active,
+.main-menu-modal li:focus {
     background-color: #f6b5a5;
 }
 
@@ -150,8 +160,11 @@ a {
 
 .login-password-info a {
     font-size: 13px;
+    font-weight: 600;
     
     color: #000000;
+    
+    border-bottom: 1px solid #000000;
 }
 
 .time-and-phone {
@@ -205,12 +218,14 @@ banners p {
     font-size: 16px;
     line-height: 22px;
     font-weight: normal;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .catalog h3:hover,
 .catalog h3:focus,
 .catalog h3:active {
     color: #ffbc9e;
+    border-bottom: 1px solid #ffbc9e;
 }
 
 .product-price {
@@ -280,6 +295,8 @@ banners p {
     line-height: 30px;
     font-weight: 700;
     
+    border-bottom: 2px solid #000000;
+    
 }
 
 
@@ -327,6 +344,7 @@ banners p {
 
 .footer-social a:hover {
     background-color: rgb(255, 255, 255);
+    
 }
 
 .footer-menu {
@@ -337,8 +355,13 @@ banners p {
     list-style: none;
 }
 
+.footer-menu a {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 .footer-menu a:hover {
     color: #ffbc9e;
+    border-bottom: 1px solid #ffbc9e;
 }
 
 .footer-copyright {
@@ -347,8 +370,13 @@ banners p {
     font-weight: normal;
 }
 
-.footer-copyright a:hover {
+.footer-copyright .copyright-link {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-copyright .copyright-link:hover {
     color: #ffbc9e;
+    border-bottom: 1px solid #ffbc9e;
 }
 
 .modal-feedback {
@@ -374,4 +402,143 @@ banners p {
 }
 */
 
+/*----------------------------------------------*/
 
+.main-menu-current {
+    color: #ffffff;
+    background-color: #d07058;
+}
+
+
+.basket-full {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+    
+    color: #000000;
+    
+    background-color: #f7f6f3;
+}
+
+.modal-basket {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: normal;
+    
+    color: #000000;
+}
+
+.modal-basket img {
+    border-radius: 50%;
+}
+
+.modal-basket h2 {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: normal;
+}
+
+.basket-product-price {
+    color: #999999;
+}
+
+.modal-basket .total {
+    text-align: right;
+    
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.filtres-button {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    
+    color: #ffffff;
+    
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid #ffffff;
+}
+
+.filtres-button:hover {
+    color: #000000;
+    
+    background-color: #fbfcfb;
+}
+
+.filtres-button:focus,
+.filtres-button:active {
+    color: #000000;
+    
+    background-color: #eaeaea;
+    box-shadow: inset 0px 2px 1px 0px #8a8b8a;
+}
+
+.breadcrumbs {    
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: normal;
+    list-style: none;
+}
+
+.breadcrumbs a {
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.filters fieldset {
+    border: none;
+}
+
+.filter legend {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: normal;
+}
+
+.filter select {
+    font-weight: 600;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.filter select:hover {
+    color: #000000;
+}
+
+.range-price {
+    font-weight: normal;
+}
+
+.range {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.filter ul {
+    font-weight: 600;
+    list-style: none;
+}
+
+.filter-item {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.pagination-list {
+    list-style: none;
+}
+
+.pagination-list a {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 600;
+}
+
+.pagination-list a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.pagination-list a:focus,
+.pagination-list a:active {
+    color: #000000;
+    background-color: #ffffff;
+}
