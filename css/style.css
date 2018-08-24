@@ -1,0 +1,377 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/web/roboto.woff2"),
+         url("../fonts/web/roboto.woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: none;
+    
+    background-color: #849d8f;
+/*
+    background-image: url("../img/background-1.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+*/
+}
+
+a {
+    text-decoration: none;
+}
+
+.button {
+    font: inherit;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    
+    text-align: center;
+    color: #ffffff;
+    vertical-align: middle;
+    text-transform: none;
+    
+    background-color: #ec583c;
+    border: none;
+    
+    box-shadow: 0 2px 2px #ac1000;
+}
+
+.button-slider {
+    font-size: 32px;
+    line-height: 44px;
+    text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+}
+
+.button:hover {
+    background-color: #f07963;
+    box-shadow: 0 2px 2px #ac1000;
+}
+
+.button:active,
+.button:focus {
+    background-color: #ec583c;
+    box-shadow: inset 0 2px 2px #942718;
+}
+
+/*Почему не срабатывает отжатие?*/
+
+.slider ul {
+    list-style: none;
+}
+
+.slider-item {
+    font-size: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.main-menu ul {
+    list-style: none;
+}
+
+.main-menu a {
+    color: #ffffff;
+}
+
+.main-menu {
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.main-menu-link:hover {
+    color: #000000;
+    
+    background-color: #f8f7f4;
+}
+
+.main-menu-modal {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: normal;
+    
+    background-color: #f8f7f4;
+    
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.main-menu-modal a {
+    color: #000000;
+}
+
+.main-menu-modal a:hover {
+    background-color: #fbded7;
+}
+
+.main-menu-modal a:active,
+.main-menu-modal a:focus {
+    background-color: #f6b5a5;
+}
+
+.shop-menu {
+    list-style: none;
+}
+
+.shop-menu a {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.shop-menu-link:hover {
+    color: #000000;
+    
+    background-color: #f8f7f4;
+}
+
+.shop-menu-modal {    
+    background-color: #f8f7f4;
+    
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.modal-search {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.modal-login form {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.login-password-info a {
+    font-size: 13px;
+    
+    color: #000000;
+}
+
+.time-and-phone {
+    font-size: 14px;
+    line-height: 16px;
+    text-align: right;
+}
+
+.phone {
+    color: #ffffff;
+    
+    font-size: 22px;
+    line-height: 24px;
+}
+
+.banners h3 {
+    font-size: 35px;
+    line-height: 41px;
+}
+
+banners p {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.banner-raspberries {
+    color: #ffffff;
+    
+    background-color: #5d1121;
+    background-image: url("../img/raspberries.jpg");
+    background-repeat: no-repeat;
+}
+
+.banner-chocolate {
+    color: #ffffff;
+    
+    background-color: #42271b;
+    background-image: url("../img/chocolate.jpg");
+    background-repeat: no-repeat;
+}
+
+.catalog ul {
+    list-style: none;
+}
+
+.catalog a {
+    color: #ffffff;
+}
+
+.catalog h3 {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: normal;
+}
+
+.catalog h3:hover,
+.catalog h3:focus,
+.catalog h3:active {
+    color: #ffbc9e;
+}
+
+.product-price {
+    font-size: 45px;
+    line-height: 45px;
+    text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+}
+
+.product-price span {
+    font-size: 30px;
+}
+
+.catalog-item img {
+    border-radius: 50%;
+}
+
+.catalog-item:hover {
+    background-color: rgba(248, 247, 244, 0.2);
+    
+    border-radius: 5px;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.features ul {
+    list-style: none;
+}
+
+.features li {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: normal;
+}
+
+.features b {
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.features {
+    color: #000000;
+    
+    background-color: #e0d4bc;
+    background-image: url("../img/waffle.jpg");
+    background-position: top center;
+    background-repeat: repeat-x;
+    
+}
+
+.new-blog {    
+    color: #000000;
+    
+    background-color: #ffffff;
+    background-image: url("../img/strawberry.jpg");
+    background-repeat: no-repeat;
+}
+
+.new-blog span {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;    
+}
+
+.new-blog a {
+    color: #000000;
+    
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    
+}
+
+
+.dispatch {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: normal;
+    
+    color: #000000;
+    
+    background-color: #f0efed;
+}
+
+.contacts {
+    color: #000000;
+    
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: normal;
+    
+    background-color: #fefefe;
+}
+
+.contacts b {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.contact-phone a {
+    color: #000000;
+}
+
+.footer a {
+    color: #ffffff;
+}
+
+.footer-social {
+    list-style: none;
+}
+
+.footer-social a {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 5px solid rgba(255, 255, 255, 0.5);
+}
+
+.footer-social a:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.footer-menu {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: normal;
+    
+    list-style: none;
+}
+
+.footer-menu a:hover {
+    color: #ffbc9e;
+}
+
+.footer-copyright {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: normal;
+}
+
+.footer-copyright a:hover {
+    color: #ffbc9e;
+}
+
+.modal-feedback {
+    color: #000000;
+    
+    background-color: #f8f7f4;
+}
+
+.modal-feedback h3 {
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.feedback-form input {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/*
+Уточнить по поводу дива с цветом
+.page {
+    background-color: #849d8f;
+}
+*/
+
+
