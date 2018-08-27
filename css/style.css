@@ -3,7 +3,13 @@
     src: url("../fonts/web/roboto.woff2"),
          url("../fonts/web/roboto.woff");
     font-weight: normal;
-    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/web/robotobold.woff2"),
+         url("../fonts/web/robotobold.woff");
+    font-weight: bold;
 }
 
 body {
@@ -13,7 +19,7 @@ body {
     font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     line-height: 1.2;
-    font-weight: bold;
+    font-weight: 700;
     color: #ffffff;
     text-transform: none;
     
@@ -33,11 +39,10 @@ a {
     font: inherit;
     font-size: 18px;
     line-height: 24px;
-    font-weight: bold;
+    font-weight: 700;
     
     text-align: center;
     color: #ffffff;
-    vertical-align: middle;
     text-transform: none;
     
     background-color: #ec583c;
@@ -57,15 +62,15 @@ a {
     box-shadow: 0 2px 2px #ac1000;
 }
 
-.button:active,
-.button:focus {
+.button:active {
     background-color: #ec583c;
     box-shadow: inset 0 2px 2px #942718;
 }
 
-/*Почему не срабатывает отжатие?*/
-
 .slider ul {
+    margin: 0;
+    padding: 0;
+    
     list-style: none;
 }
 
@@ -76,6 +81,9 @@ a {
 }
 
 .main-menu ul {
+    margin: 0;
+    padding: 0;
+    
     list-style: none;
 }
 
@@ -95,7 +103,6 @@ a {
     background-color: #f8f7f4;
 }
 
-.main-menu-link:focus,
 .main-menu-link:active {
     color: #000000;
     
@@ -107,7 +114,7 @@ a {
 .main-menu-modal {
     font-size: 14px;
     line-height: 16px;
-    font-weight: normal;
+    font-weight: 400;
     
     background-color: #f8f7f4;
     
@@ -122,12 +129,14 @@ a {
     background-color: #fbded7;
 }
 
-.main-menu-modal li:active,
-.main-menu-modal li:focus {
+.main-menu-modal li:active {
     background-color: #f6b5a5;
 }
 
 .shop-menu {
+    margin: 0;
+    padding: 0;
+    
     list-style: none;
 }
 
@@ -185,7 +194,7 @@ a {
     line-height: 41px;
 }
 
-banners p {
+.banners p {
     font-size: 18px;
     line-height: 22px;
 }
@@ -207,23 +216,23 @@ banners p {
 }
 
 .catalog ul {
+    margin: 0;
+    padding: 0;
+    
     list-style: none;
 }
 
-.catalog a {
-    color: #ffffff;
-}
-
-.catalog h3 {
+.catalog a:not(.button) {
     font-size: 16px;
     line-height: 22px;
-    font-weight: normal;
+    font-weight: 400;
+    
+    color: #ffffff;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.catalog h3:hover,
-.catalog h3:focus,
-.catalog h3:active {
+.catalog a:hover:not(.button),
+.catalog a:active:not(.button) {
     color: #ffbc9e;
     border-bottom: 1px solid #ffbc9e;
 }
@@ -249,14 +258,23 @@ banners p {
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
+.catalog-item {
+    padding-top: 6px;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
 .features ul {
+    margin: 0;
+    padding: 0;
+    
     list-style: none;
 }
 
 .features li {
     font-size: 16px;
     line-height: 22px;
-    font-weight: normal;
+    font-weight: 400;
 }
 
 .features b {
@@ -303,19 +321,20 @@ banners p {
 .dispatch {
     font-size: 16px;
     line-height: 22px;
-    font-weight: normal;
+    font-weight: 400;
     
     color: #000000;
     
     background-color: #f0efed;
 }
 
+
 .contacts {
     color: #000000;
     
     font-size: 14px;
     line-height: 20px;
-    font-weight: normal;
+    font-weight: 400;
     
     background-color: #fefefe;
 }
@@ -334,6 +353,9 @@ banners p {
 }
 
 .footer-social {
+    margin: 0;
+    padding: 0;
+    
     list-style: none;
 }
 
@@ -348,9 +370,12 @@ banners p {
 }
 
 .footer-menu {
+    margin: 0;
+    padding: 0;
+    
     font-size: 13px;
     line-height: 18px;
-    font-weight: normal;
+    font-weight: 400;
     
     list-style: none;
 }
@@ -367,7 +392,7 @@ banners p {
 .footer-copyright {
     font-size: 12px;
     line-height: 18px;
-    font-weight: normal;
+    font-weight: 400;
 }
 
 .footer-copyright .copyright-link {
@@ -391,6 +416,7 @@ banners p {
 }
 
 .feedback-form input {
+    font-family: inherit;
     font-size: 16px;
     line-height: 24px;
 }
@@ -423,7 +449,7 @@ banners p {
 .modal-basket {
     font-size: 13px;
     line-height: 16px;
-    font-weight: normal;
+    font-weight: 400;
     
     color: #000000;
 }
@@ -435,7 +461,7 @@ banners p {
 .modal-basket h2 {
     font-size: 13px;
     line-height: 16px;
-    font-weight: normal;
+    font-weight: 400;
 }
 
 .basket-product-price {
@@ -466,7 +492,6 @@ banners p {
     background-color: #fbfcfb;
 }
 
-.filtres-button:focus,
 .filtres-button:active {
     color: #000000;
     
@@ -474,10 +499,13 @@ banners p {
     box-shadow: inset 0px 2px 1px 0px #8a8b8a;
 }
 
-.breadcrumbs {    
+.breadcrumbs {
+    margin: 0;
+    padding: 0;
+    
     font-size: 14px;
     line-height: 16px;
-    font-weight: normal;
+    font-weight: 400;
     list-style: none;
 }
 
@@ -493,7 +521,7 @@ banners p {
 .filter legend {
     font-size: 16px;
     line-height: 18px;
-    font-weight: normal;
+    font-weight: 400;
 }
 
 .filter select {
@@ -507,7 +535,7 @@ banners p {
 }
 
 .range-price {
-    font-weight: normal;
+    font-weight: 400;
 }
 
 .range {
@@ -515,6 +543,9 @@ banners p {
 }
 
 .filter ul {
+    margin: 0;
+    padding: 0;
+    
     font-weight: 600;
     list-style: none;
 }
@@ -524,6 +555,10 @@ banners p {
 }
 
 .pagination-list {
+    margin: 0;
+    padding: 0;
+    
+    color: #ffffff;
     list-style: none;
 }
 
@@ -531,13 +566,14 @@ banners p {
     font-size: 16px;
     line-height: 18px;
     font-weight: 600;
+    
+    color: #ffffff;
 }
 
 .pagination-list a:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-.pagination-list a:focus,
 .pagination-list a:active {
     color: #000000;
     background-color: #ffffff;
