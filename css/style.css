@@ -346,8 +346,8 @@ a {
 
 .catalog-item {
     padding-top: 6px;
-    padding-left: 14px;
-    padding-right: 14px;
+    padding-left: 13px;
+    padding-right: 13px;
 }
 
 .features ul {
@@ -525,6 +525,10 @@ a {
 .footer-copyright .copyright-link:hover {
     color: #ffbc9e;
     border-bottom: 1px solid #ffbc9e;
+}
+
+.modal-feedback {
+    background-color: #f8f7f4;
 }
 
 
@@ -747,73 +751,74 @@ textarrea и бордер радиус
 /*-----------Сеточные стили-------------*/
 
 
-.header {    
-    margin-bottom: 525px;
+.modal-card,
+.modal-search,
+.modal-login,
+.modal-basket {
+    display: none;
+}
+
+.header {
+    margin-bottom: 530px;
+    
+}
+
+.header-logo {
+    width: 154px;
+    height: 64px;
+}
+
+.main-menu {
+    width: 678px; 
+}
+
+.shop-menu {
+    width: 267px;
+    margin-left: auto;
 }
 
 .header-wrapper {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    
-    padding-top: 20px;
-    padding-bottom: 20px;
+    width: 100%;
 }
 
-.header-logo {
-    padding-top: 10px;
-    padding-right: 25px;
-    padding-left: 27px;
+.container {
+    width: 1146px;
+    margin: 0 auto;
+    padding: 0 27px;
 }
 
-.main-menu {
-    width: 385px;
-}
-
-.shop-menu {
-    margin-left: auto;
-    padding-right: 27px;
-    width: 267px;
-}
-
-.time-and-phone {
-    padding-right: 25px;
-}
 
 .index-columns {
     display: flex;
     justify-content: space-between;
-    
     margin-bottom: 40px;
-    padding-left: 27px;
-    padding-right: 27px;
+}
+
+.banners {
+    margin-bottom: 40px;
 }
 
 .banner {
     width: 560px;
-    min-height: 230px;
+    height: 230px;
 }
-
 
 .catalog-list {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 42px;
+    margin-bottom: 40px;
 }
 
+.inner-page .header-logo {
+    margin-bottom: 27px;
+}
 
 .product {
     width: 267px;
-    margin-top: 6px;
-    padding-right: 13px;
-    padding-left; 13px;
 }
 
-
 .features {
-    margin-left: 27px;
-    margin-right: 27px;
     margin-bottom: 40px;
 }
 
@@ -825,93 +830,76 @@ textarrea и бордер радиус
     width: 560px;
 }
 
-.map-wrapper {
-    display: flex;
+.map-image {
+    width: 100%;
 }
 
 .contacts {
-    margin-left: auto;
-    width: 300px;
+    width: 302px;
 }
 
 .footer {
-    margin-top: 20px;
-    padding: 0 27px;
-}
-
-.footer-social {
-    width: 190px;
-    margin-right: 210px;
-    
-}
-
-.footer-menu {
-    width: 340px;
-}
-
-.footer-copyright {
-    width: 190px;
-    margin-left: auto;
+    margin-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .footer-wrapper {
     display: flex;
 }
 
-/*--------------------*/
+.footer-social {
+    width: 187px;
+    margin-right: 212px;
+}
+
+.footer-menu {
+    width: 454px;
+}
+
+.footer-copyright {
+    width: 267px;
+    margin-left: auto;
+    text-align: right;
+}
 
 .inner-page .header {
-    margin-bottom: 23px;
+    margin-bottom: 0;
 }
 
 .breadcrumbs {
-    margin: 0;
-    padding: 0;
-    margin-bottom: 5px;
+    width: 267px;
+    margin-bottom: 12px;
 }
 
 .page-title {
-    margin-bottom: 30px;
-}
-
-.filtres {
-    margin: 0;
-    padding: 0;
-    margin-bottom: 40px;
-}
-
-.filters-wrapp {
-    display: flex;
+    margin-bottom: 26px;
 }
 
 .sort-filter {
     width: 194px;
-    margin-right: 14px;
 }
 
 .range-filter {
-    width: 220px;
-    margin-right: 14px;
+    width: 218px;
 }
 
 .fat-filter {
-    width: 420px;
+    width: 415px;
 }
 
 .items-filter {
-    width: 705px;
+    width: 704px;
 }
 
-.button-filter {
-    width: 149px;
+.filtres-button {
+    width: 147px;
 }
 
-.inner-page .product {
-    margin-bottom: 80px;
+.filter-wrapper {
+    display: flex;
 }
 
 .pagination-list {
     text-align: right;
+    margin-bottom: 25px;
 }
-
-
