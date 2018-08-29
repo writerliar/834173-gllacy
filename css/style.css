@@ -746,6 +746,7 @@ textarrea и бордер радиус
 
 /*-----------Сеточные стили-------------*/
 
+
 .header {    
     margin-bottom: 525px;
 }
@@ -912,3 +913,5 @@ textarrea и бордер радиус
 .pagination-list {
     text-align: right;
 }
+
+
