@@ -364,6 +364,22 @@ input[type="radio"].visually-hidden {
     margin: 5px 0;
 }
 
+.modal-card-current {
+    display: block;
+    
+    padding-top: 6px;
+    padding-bottom: 7px;
+    padding-left: 20px;
+    margin: 5px 0;
+    
+    background-color: #d07058;
+}
+
+.main-menu-modal .modal-card-current:hover,
+.main-menu-modal .modal-card-current:active {
+    background-color: #d07058;
+}
+
 .shop-menu {
     width: 293px;
     margin-top: 14px;
@@ -998,16 +1014,34 @@ textarrea и бордер радиус
 .main-menu-current {
     color: #ffffff;
     background-color: #d07058;
+    
+    padding-top: 7px;
+    padding-right: 13px;
+    padding-bottom: 9px;
+    padding-left: 14px;
+    
+    border-radius: 16px;
+    
 }
 
-/*
-Не получается переопределить ховер для каталога
-
-.main-menu-current:hover,
-.main-menu-current:active {
-    background-color: #000000;
+.main-menu-current a {
+    border-bottom: none;
 }
-*/
+
+.main-menu-current:hover {
+    background-color: #d07058;
+    
+    padding-top: 7px;
+    padding-right: 13px;
+    padding-bottom: 9px;
+    padding-left: 14px;
+    
+    border-radius: 16px;
+}
+
+.main-menu-current:hover .main-menu-link {
+    color: #ffffff;
+}
 
 .basket-full {
     font-size: 14px;
@@ -1017,6 +1051,23 @@ textarrea и бордер радиус
     color: #000000;
     
     background-color: #f7f6f3;
+}
+
+.basket-full a {
+    color: #000000;
+}
+
+.modal-basket {
+    position: absolute;
+    display: none;
+}
+
+.modal-basket a {
+    color: #ffffff;
+}
+
+.basket-full:hover .modal-basket {
+    display: block;
 }
 
 .modal-basket {
@@ -1157,7 +1208,6 @@ textarrea и бордер радиус
 
 
 
-.modal-basket,
 .modal-feedback {
     display: none;
     position: absolute;
