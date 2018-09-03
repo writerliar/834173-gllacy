@@ -24,6 +24,10 @@ body {
     text-transform: none;
 }
 
+.inner-page {
+    background-color: #849d8f;
+}
+
 a {
     text-decoration: none;
 }
