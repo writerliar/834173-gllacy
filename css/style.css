@@ -61,6 +61,31 @@ img {
     box-shadow: 0 2px 2px #ac1000;
 }
 
+.modal-feedback-show {
+    display: block;
+}
+
+.header {
+    margin-bottom: 276px;
+}
+
+.header {
+    padding-top: 9px;
+}
+
+.header-logo {
+    width: 154px;
+    height: 64px;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    
+    margin: 0;
+}
+
 .slide-button {
     font-size: 32px;
     line-height: 44px;
@@ -194,7 +219,7 @@ input[type="radio"].visually-hidden {
 
 .slider-controls {
     position: absolute;
-    bottom: 29px;
+    bottom: 23px;
     left: 0;
     z-index: 8;
     
@@ -264,8 +289,8 @@ input[type="radio"].visually-hidden {
 
 .main-menu {
     width: 419px;
-    margin-top: 11px;
-    margin-left: 8px;
+    margin-top: 13px;
+    margin-left: 9px;
     margin-right: 26px;
     
     font-size: 16px;
@@ -346,25 +371,79 @@ input[type="radio"].visually-hidden {
     margin-right: 1px;
 }
 
+.modal-wrapper {
+    position: absolute;
+}
+
+.modal-wrapper-card {
+    top: 30px;
+    left: -5px;
+}
+
+.modal-wrapper-search {
+    top: 30px;
+    right: 0;
+    
+}
+
+.modal-wrapper-login {
+    top: 30px;
+    right: 0;
+}
 
 .modal-card {
-    width: 143px;
+    display: none;
     
-    top: 32px;
-    left: -5px;
+    position: relative;
+    
+    width: 143px;
+    margin-top: 10px;
+    padding-bottom: 6px;
         
     border-radius: 5px;
 }
 
-.modal-card-link {
+.link-modal:hover .modal-card {
     display: block;
+    
+    margin-top: 10px;
+    padding-bottom: 6px;
 }
 
-.modal-card-item {
-    padding-top: 6px;
+.modal-card-item:first-child {
+    position: relative;
+    margin-bottom: 4px;
+}
+
+.modal-card-item:first-child .modal-card-link {
+    padding-top: 11px;
+    padding-bottom: 13px;
+    font-weight: 700;
+}
+
+.modal-card-item:not(:first-child):not(:last-child) {
+    margin-bottom: 3px;
+}
+
+.modal-card-link {
+    padding-top: 5px;
     padding-bottom: 7px;
-    padding-left: 20px;
-    margin: 5px 0;
+    padding-left: 19px;
+    
+    font-weight: 400;
+}
+
+.modal-card-item:first-child::before {
+    content: "";
+    
+    position: absolute;
+    left: 5%;
+    width: 90%;
+    
+    bottom: 1px;
+    height: 1px;
+    
+    background-color: #d1d0ce;
 }
 
 .modal-card-current {
@@ -378,9 +457,11 @@ input[type="radio"].visually-hidden {
     background-color: #d07058;
 }
 
+/*
 .modal-card-current .modal-card-link {
     color: #ffffff;
 }
+*/
 
 .main-menu-modal .modal-card-current:hover,
 .main-menu-modal .modal-card-current:active {
@@ -388,14 +469,19 @@ input[type="radio"].visually-hidden {
 }
 
 .shop-menu {
-    width: 293px;
-    margin-top: 14px;
-    margin-left: auto;
-    padding: 0;
-    
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-end;
+    align-items: center;
+    
+    width: 293px;
+    margin-top: 9px;
+    margin-left: auto;
+    padding: 0;
+    padding-top: 5px;
+    
+    font-size: 14px;
+    line-height: 16px;
     
     list-style: none;
 }
@@ -408,8 +494,9 @@ input[type="radio"].visually-hidden {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-.shop-menu-item:not(.shop-menu-search) {
-    padding: 6px 15px;
+.shop-menu-item:not(:last-child) {
+    margin-right: 8px;
+
 }
 
 .shop-menu-link {
@@ -417,15 +504,35 @@ input[type="radio"].visually-hidden {
     vertical-align: top;
 }
 
+.shop-menu-link svg {
+    margin-right: 5px;
+}
+
 .shop-menu-search {
-    font-size: 0;
-    
-    padding: 8px;
+    position: relative;
+    padding: 7px;
+    padding-bottom: 4px;
     border-radius: 50%;
 }
 
-.basket .shop-menu-link {
-    padding: 8px 16px;
+.shop-menu-search svg {
+    margin: 0;
+}
+
+.shop-menu-login {
+    position: relative;
+    padding-top: 6px;
+    padding-left: 9px;
+    padding-bottom: 3px;
+    padding-right: 17px;
+}
+
+.basket {
+    position: relative;
+    padding-top: 6px;
+    padding-left: 9px;
+    padding-bottom: 2px;
+    padding-right: 17px;
 }
 
 .shop-menu-item:not(.shop-menu-search) {
@@ -451,7 +558,7 @@ input[type="radio"].visually-hidden {
 }
 
 .shop-menu-link:not(.search-link) {
-    padding-left: 7px;
+    padding-left: 6px;
 }
 
 .shop-menu-item:hover:not(.basket) .shop-menu-link {
@@ -464,11 +571,10 @@ input[type="radio"].visually-hidden {
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
-.modal-card,
 .modal-search,
 .modal-login {
     display: none;
-    position: absolute;
+    position: relative;
 }
 
 
@@ -480,17 +586,19 @@ input[type="radio"].visually-hidden {
     display: block;
 }
 
-.modal-search {
-    top: 36px;
-    right: 0;
-    
-    width: 344px;
-    padding: 22px 18px;
+.modal-search {    
+    padding-top: 18px;
+    padding-bottom: 19px;
+    padding-left: 14px;
+    padding-right: 31px;
+    margin-top: 10px;
+    width: 342px;
     
     font-size: 14px;
-    line-height: 24px;
     
     border-radius: 5px;
+    
+    box-sizing: border-box;
 }
 
 .modal-search form {
@@ -498,14 +606,16 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-search input {
-    width: 310px;
+    width: 273px;
     
-    padding: 12px 15px;
+    padding-left: 12px;
+    padding-top: 10px;
+    padding-bottom: 14px;
+        padding-right: 24px;
     margin: 1px;
     
     font-family: inherit;
     font-size: 16px;
-    line-height: 24px;
     font-weight: 700;
     
     background-color: #ffffff;
@@ -542,17 +652,10 @@ input[type="radio"].visually-hidden {
     outline: 0;
 }
 
-.modal-login p {
-    margin: 0;
-}
-
-.modal-login {
-    top: 36px;
-    right: 0;
-    
-    width: 277px;
-    
+.modal-login {    
+    width: 236px;
     padding: 20px 19px;
+    margin-top: 10px;
     
     border-radius: 5px;
 }
@@ -560,7 +663,6 @@ input[type="radio"].visually-hidden {
 
 .modal-login form {
     font-size: 14px;
-    line-height: 24px;
 }
 
 .modal-login input::-webkit-input-placeholder {
@@ -578,14 +680,13 @@ input[type="radio"].visually-hidden {
 .modal-login input {
     font-family: inherit;
     font-size: 16px;
-    line-height: 24px;
     font-weight: 700;
     
-    width: 240px;
-    padding: 10px 15px;
+    width: 216px;
+    padding: 12px 11px;
     
     margin: 1px;
-    margin-bottom: 20px;
+    margin-bottom: 19px;
     
     background-color: #ffffff;
     
@@ -595,7 +696,7 @@ input[type="radio"].visually-hidden {
 
 .modal-login input:hover {
     margin: 0;
-    margin-bottom: 19px;
+    margin-bottom: 18px;
     
     border: 2px solid #c7c6c5;
     border-radius: 5px;
@@ -603,7 +704,7 @@ input[type="radio"].visually-hidden {
 
 .modal-login input:focus {
     margin: 0;
-    margin-bottom: 19px;
+    margin-bottom: 18px;
     
     border: 2px solid #8fbdec;
     border-radius: 5px;
@@ -611,8 +712,29 @@ input[type="radio"].visually-hidden {
     outline: 0;
 }
 
+.modal-login .button {
+    padding-top: 10px;
+    padding-right: 24px;
+    padding-bottom: 10px;
+    padding-left: 22px;
+    
+    border-radius: 17px;
+}
+
+.modal-login p {
+    margin: 0;
+}
+
+.login-password-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-password-info a:first-child {
+    margin-bottom: 7px;
+}
+
 .login-password-info a {
-    display: inline-block;
     font-size: 13px;
     font-weight: 400;
     
@@ -621,10 +743,10 @@ input[type="radio"].visually-hidden {
     border-bottom: 1px solid #000000;
 }
 
-/*-------Как развести кнопку и ссылки?-------*/
-
 .modal-login-wrapper {
     display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
     justify-content: space-between;
 }
 
@@ -678,6 +800,13 @@ input[type="radio"].visually-hidden {
     background-repeat: no-repeat;
 }
 
+.catalog-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    justify-content: space-between;
+}
+
 .catalog ul {
     margin: 0;
     padding: 0;
@@ -701,13 +830,11 @@ input[type="radio"].visually-hidden {
 }
 
 .product {
-    width: 267px;
+    position: relative;
     margin-bottom: 36px;
-}
-
-.product h3 {
-    margin: 0;
-    text-align: center;
+    z-index: 1;
+    
+    width: 267px;
 }
 
 .product-hit::before {
@@ -724,6 +851,17 @@ input[type="radio"].visually-hidden {
     background-image: url(../img/hit.svg);
 }
 
+.product-image {
+    position: relative;
+    z-index: 2;
+    
+    margin-bottom: 9px;
+}
+
+.catalog-item img {
+    border-radius: 50%;
+}
+
 .product-price {
     position: absolute;
     margin: 0;
@@ -736,36 +874,23 @@ input[type="radio"].visually-hidden {
     text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
-.product-image {
-    position: relative;
-    z-index: 2;
-    
-    margin-bottom: 9px;
-}
-
 .product-price span {
     font-size: 30px;
 }
 
-.catalog-item img {
-    border-radius: 50%;
+.product h3 {
+    margin: 0;
+    z-index: 3;
+    
+    text-align: center;
 }
 
-.catalog .product {
-    position: relative;
-}
-
-.product:hover .product-hover{
+.catalog-item:hover .product-hover{
     opacity: 1;
-    z-index: 4;
 }
 
-.product:hover::before {
-    z-index: 6;
-}
-
-.product:hover .product-image {
-    z-index: 5;
+.catalog-item:hover .product {
+    z-index: 2;
 }
 
 .product-hover {
@@ -968,19 +1093,30 @@ input[type="radio"].visually-hidden {
 .dispatch input {
     margin: 1px;
     margin-right: 10px;
-    padding: 8px 12px;
+    padding: 12px 12px;
     
     width: 342px;
     
     font-family: inherit;
     font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
+    font-weight: 700;
     
     background-color: #ffffff;
     
     border: 1px solid #d3d3d2;
     border-radius: 5px;
+}
+
+.dispatch input::-webkit-input-placeholder {
+    font-weight: 400;
+}
+
+.dispatch input::-moz-placeholder {
+    font-weight: 400;
+}
+
+.dispatch input:-ms-input-placeholder {
+    font-weight: 400;
 }
 
 .dispatch .button {
@@ -992,13 +1128,6 @@ input[type="radio"].visually-hidden {
     margin: 0;
     margin-right: 9px;
     
-    font-family: inherit;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
-    
-    background-color: #ffffff;
-    
     border: 2px solid #c7c6c5;
     border-radius: 5px;
 }
@@ -1008,11 +1137,6 @@ input[type="radio"].visually-hidden {
     margin-right: 9px;
     
     font-family: inherit;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
-    
-    background-color: #ffffff;
     
     border: 2px solid #8fbdec;
     border-radius: 5px;
@@ -1023,13 +1147,10 @@ input[type="radio"].visually-hidden {
 
 .map {
     position: relative;
-    min-height: 429px;
-}
-
-
-.map img {
     width: 100%;
-    height: 429px;
+    min-height: 429px;
+    
+    background-image: url(../img/map.jpg);
 }
 
 .contacts {
@@ -1106,6 +1227,9 @@ input[type="radio"].visually-hidden {
 
 .footer-wrapper {
     display: flex;
+    align-items: flex-start;
+    
+    padding-bottom: 30px;
 }
 
 .footer a {
@@ -1120,9 +1244,9 @@ input[type="radio"].visually-hidden {
     
     width: 267px;
     
-    margin: 0;
-    margin-right: 131px;
-    margin-top: 20px;
+    margin-top: 37px;
+    margin-left: 4px;
+    margin-right: 151px;
     padding: 0;
     
     list-style: none;
@@ -1132,7 +1256,7 @@ input[type="radio"].visually-hidden {
     position: relative;
     display: block;
     
-    margin-right: 20px;
+    margin-right: 17px;
     
     font-size: 0;
     
@@ -1142,8 +1266,7 @@ input[type="radio"].visually-hidden {
 
 .social-icon {
     fill: #ffffff;
-    fill-opacity: 0.8;
-    
+    fill-opacity: 0.8;  
 }
 
 .social-btn:hover {
@@ -1170,12 +1293,13 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-menu {
-    margin: 0 auto;
-    margin-top: 15px;
     padding: 0;
+    margin-top: 31px;
     
     display: flex;
     flex-wrap: wrap;
+    align-content: ;
+    
     width: 360px;
     
     font-size: 0px;
@@ -1185,15 +1309,10 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-menu li {
-    display: inline-block;
     vertical-align: top;
-    
-    margin-right: 27px;
     
     min-width: 142px;
     line-height: 16px;
-    
-    box-sizing: border-box;
 }
 
 .footer-menu b {
@@ -1201,7 +1320,9 @@ input[type="radio"].visually-hidden {
     padding:0;
 }
 
-.footer-menu a {
+.footer-menu-link {
+    position: relative;
+    
     font-size: 13px;
     line-height: 18px;
     padding:0;
@@ -1212,17 +1333,21 @@ input[type="radio"].visually-hidden {
 
 .heart {
     position: absolute;
-    bottom: -3px;
-    left: -20px;
-    
+    top: 2px;
+    left: -22px;
     
     fill: #ffffff;
 }
 
 
 .footer-copyright {
-    width: 267px;
+    width: 189px;
     margin-left: auto;
+    margin-top: 17px;
+    
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
     text-align: right;
 }
 
@@ -1240,10 +1365,9 @@ input[type="radio"].visually-hidden {
     fill: #ffbc9e;
 }
 
-.footer-copyright {
-    font-size: 12px;
-    line-height: 18px;
-    font-weight: 400;
+.html-logo-link {
+    display: block;
+    text-align: left;
 }
 
 .footer-copyright .copyright-link {
@@ -1255,17 +1379,22 @@ input[type="radio"].visually-hidden {
     border-bottom: 1px solid #ffbc9e;
 }
 
+.footer-copyright p {
+    margin: 0;
+}
+
 .modal-feedback {
     display: none;
-/*    position: fixed;*/
-    position: absolute;
-    top: 338px;
+    position: fixed;
+    top: 100px;
     left: 409px;
     z-index: 10;
     width: 471px;
     
     padding-top: 15px;
     padding-left: 24px;
+    padding-bottom: 15px;
+    padding-right: 24px;
     
     background-color: #f8f7f4;
     border-radius: 9px;
@@ -1290,10 +1419,9 @@ input[type="radio"].visually-hidden {
     margin: 0;
 }
 
-.feedback-form input,
-.feedback-form .modal-feedback-message {
-    padding-top: 9px;
-    padding-bottom: 8px;
+.feedback-form input {
+    padding-top: 11px;
+    padding-bottom: 12px;
     padding-left: 12px;
     padding-right: 10px;
     margin: 1px;
@@ -1303,8 +1431,7 @@ input[type="radio"].visually-hidden {
     
     font-family: inherit;
     font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
+    font-weight: 700;
     
     background-color: #ffffff;
     
@@ -1314,13 +1441,19 @@ input[type="radio"].visually-hidden {
     box-sizing: border-box;
 }
 
-.modal-feedback-message {
-    width: 421px;
-    height: 152px;
+.modal-feedback input::-webkit-input-placeholder {
+    font-weight: 400;
 }
 
-.feedback-form input:hover,
-.feedback-form .modal-feedback-message:hover {
+.modal-feedback input::-moz-placeholder {
+    font-weight: 400;
+}
+
+.modal-feedback input:-ms-input-placeholder {
+    font-weight: 400;
+}
+
+.feedback-form input:hover {
     margin: 0;
     margin-bottom: 18px;
     
@@ -1328,8 +1461,7 @@ input[type="radio"].visually-hidden {
     border-radius: 5px;
 }
 
-.feedback-form input:focus,
-.feedback-form .modal-feedback-message:focus {
+.feedback-form input:focus {
     margin: 0;
     margin-bottom: 18px;
     
@@ -1339,8 +1471,66 @@ input[type="radio"].visually-hidden {
     outline: 0;
 }
 
+.modal-feedback-message {
+    padding-top: 9px;
+    padding-bottom: 8px;
+    padding-left: 12px;
+    padding-right: 10px;
+    margin: 1px;
+    margin-bottom: 19px;
+        
+    height: 152px;
+    width: 100%;
+    
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+/*    При наведении фон от текстареа выскакивает. Это баг?*/
+    background-color: #ffffff;
+    
+    border: 1px solid #d3d3d2;
+    border-radius: 5px;
+    
+    box-sizing: border-box;
+}
+
+.modal-feedback-message::-webkit-input-placeholder {
+    font-weight: 400;
+}
+
+.modal-feedback-message::-moz-placeholder {
+    font-weight: 400;
+}
+
+.modal-feedback-message:-ms-input-placeholder {
+    font-weight: 400;
+}
+
+.feedback-form .modal-feedback-message:hover {
+    margin: 0;
+    margin-bottom: 20px;
+    
+    border: 2px solid #c7c6c5;
+    border-radius: 5px;
+}
+
+.feedback-form .modal-feedback-message:focus {
+    margin: 0;
+    margin-bottom: 20px;
+    
+    border: 2px solid #8fbdec;
+    border-radius: 5px;
+    
+    outline: 0;
+}
+
 .modal-button {
-    margin-bottom: 25px;
+    margin-bottom: 11px;
+}
+
+.feedback-button-wrapper {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .modal-close {
@@ -1573,31 +1763,6 @@ input[type="radio"].visually-hidden {
 
 
 
-
-.link-modal:hover .modal-card {
-    display: block;
-}
-
-.modal-card {
-    position: absolute;
-}
-
-.header {
-    padding-top: 9px;
-}
-
-.header-logo {
-    width: 154px;
-    height: 64px;
-}
-
-.header-wrapper {
-    display: flex;
-    width: 100%;
-    
-    margin: 0;
-}
-
 .container {
     width: 1146px;
     margin: 0 auto;
@@ -1618,13 +1783,6 @@ input[type="radio"].visually-hidden {
 .banner {
     width: 560px;
     height: 230px;
-}
-
-.catalog-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
-    justify-content: space-between;
 }
 
 .inner-page .header-logo {
@@ -1674,10 +1832,6 @@ input[type="radio"].visually-hidden {
 }
 
 /*баннеры*/
-
-.header {
-    margin-bottom: 273px;
-}
 
 .slider {
     margin-bottom: 42px;

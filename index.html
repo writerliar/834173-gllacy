@@ -74,6 +74,7 @@
                             <ul class="main-menu-wrapper">
                                 <li class="main-menu-item link-modal">
                                     <a class="main-menu-link">Каталог</a>
+                                    <div class="modal-wrapper modal-wrapper-card">
                                         <ul class="main-menu-modal modal-card">
                                             <li class="modal-card-item">
                                                 <a class="modal-card-link"><b>Новинки</b></a>
@@ -91,6 +92,7 @@
                                                 <a class="modal-card-link" href="#">Мелорин</a>
                                             </li>
                                         </ul>
+                                    </div>   
                                 </li>
                                 <li class="main-menu-item">
                                     <a class="main-menu-link" href="#">Доставка и оплата</a>
@@ -102,12 +104,13 @@
                         </nav>
                         <ul class="shop-menu">
                             <li class="shop-menu-item shop-menu-search">
-                                <svg class="icon-search" width="17" height="17"><use xlink:href="#icon-search"></use>
-                                </svg>
                                 <a href="#" class="shop-menu-link search-link">
+                                    <svg class="icon-search" width="17" height="17"><use xlink:href="#icon-search"></use>
+                                    </svg>
                                     <span class="visually-hidden">Поиск</span>
                                 </a>
-                                <section class="shop-menu-modal modal-search">
+                                <div class="modal-wrapper modal-wrapper-search">
+                                    <section class="shop-menu-modal modal-search">
                                     <h2 class="visually-hidden">Форма поиска</h2>
                                     <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
                                         <label class="visually-hidden" for="form-search">Поиск</label>
@@ -116,41 +119,44 @@
 
                                         <input type="text" name="search" id="form-search" placeholder="Что ищем?">
                                     </form>
-                                </section>
+                                    </section>
+                                </div>
                             </li>
                             <li class="shop-menu-item shop-menu-login">
-                                <svg class="icon-enter" width="21" height="19">
-                                    <use xlink:href="#icon-enter"></use>
-                                </svg>
                                 <a href="#" class="shop-menu-link">
+                                    <svg class="icon-enter" width="21" height="19">
+                                    <use xlink:href="#icon-enter"></use>
+                                    </svg>
                                     Вход
                                 </a>
-                                <section class="shop-menu-modal modal-login">
-                                    <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-                                        <h2 class="visually-hidden">Личный кабинет</h2>
-                                        <p>
-                                            <label class="visually-hidden" for="login-email">Адрес электронной почты</label>
-                                            <input type="email" name="email" id="login-email" value="" placeholder="Электронная почта">
-                                        </p>
-                                        <p>
-                                            <label class="visually-hidden" for="login-password">Введите пароль</label>
-                                            <input type="password" name="password" id="login-password" value="" placeholder="Пароль">
-                                        </p>
-                                        <div class="modal-login-wrapper">
-                                            <button class="button" type="submit">Войти</button>
-                                            <p class="login-password-info">
-                                                <a href="#">Забыли пароль?</a>
-                                                <a href="#">Новая регистрация</a>
+                                <div class="modal-wrapper modal-wrapper-login">
+                                    <section class="shop-menu-modal modal-login">
+                                        <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                                            <h2 class="visually-hidden">Личный кабинет</h2>
+                                            <p>
+                                                <label class="visually-hidden" for="login-email">Адрес электронной почты</label>
+                                                <input type="email" name="email" id="login-email" value="" placeholder="Электронная почта">
                                             </p>
-                                        </div>
-                                    </form>
-                                </section> 
+                                            <p>
+                                                <label class="visually-hidden" for="login-password">Введите пароль</label>
+                                                <input type="password" name="password" id="login-password" value="" placeholder="Пароль">
+                                            </p>
+                                            <div class="modal-login-wrapper">
+                                                <button class="button" type="submit">Войти</button>
+                                                <p class="login-password-info">
+                                                    <a href="#">Забыли пароль?</a>
+                                                    <a href="#">Новая регистрация</a>
+                                                </p>
+                                            </div>
+                                        </form>
+                                    </section> 
+                                </div>
                             </li>
                             <li class="shop-menu-item basket">
-                                <svg class="icon-basket" width="21" height="20">
-                                    <use xlink:href="#icon-basket"></use>
-                                </svg>
                                 <a class="shop-menu-link">
+                                    <svg class="icon-basket" width="21" height="20">
+                                    <use xlink:href="#icon-basket"></use>
+                                    </svg>
                                     Пусто
                                 </a>
                             </li>
@@ -339,7 +345,7 @@
             
             <section class="map">
                 <h2 class="visually-hidden">Как до нас добраться</h2>
-                     <img width="1200" height="429" src="img/map.jpg" alt="Мы находимся по адрему ул. Большая Конюшенная 19/8, Санкт-Петербург">
+<!--                     <img width="1200" height="429" src="img/map.jpg" alt="Мы находимся по адрему ул. Большая Конюшенная 19/8, Санкт-Петербург">-->
                 <div class="contacts">
                     <p class="contacts-text">Адрес главного офиса<br> и офлайн-магазина:<br>
                         <b class="contact-address">ул. Большая Конюшенная<br> 19/8, Санкт-Петербург</b>
@@ -395,26 +401,26 @@
                         </li>
                     </ul>
                     <ul class="footer-menu">
-                        <li class="footer-menu-link-bold">
-                            <b>
+                        <li>
+                            <a class="footer-menu-link footer-menu-link-bold" href="#">
                                 <svg class="heart" width="15" height="13">
                                     <use xlink:href="#heart"></use>
-                                </svg>
-                                <a href="#">Для поставщиков</a>
-                            </b>
+                                    </svg>
+                                <b>Для поставщиков</b>
+                            </a>
                         </li>
                         <li>
-                            <a href="#">Наши документы</a>
+                            <a class="footer-menu-link" href="#">Наши документы</a>
                         </li>
                         <li>
-                            <a href="#">О производстве</a>
+                            <a class="footer-menu-link" href="#">О производстве</a>
                         </li>
                         <li>
-                            <a href="#">Экологические стандарты</a>
+                            <a class="footer-menu-link" href="#">Экологические стандарты</a>
                         </li>
                     </ul>
                     <div class="footer-copyright">
-                        <a href="https://htmlacademy.ru/intensive/htmlcss">
+                        <a class="html-logo-link" href="https://htmlacademy.ru/intensive/htmlcss">
                             <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTML Academy">
                         </a>
                         <p>Сделано в <a class="copyright-link" href="https://htmlacademy.ru/">HTML Academy</a> © 2018</p>
@@ -438,7 +444,10 @@
                       <label for="feedback-massage"  class="visually-hidden">Введите ваше сообщение</label>
                       <textarea class="modal-feedback-message" name="message" id="feedback-massage" placeholder="Напишите нам что-нибудь..."></textarea>
                   </p>
-                  <button class="button modal-button" type="submit">Отправить</button>
+                  <div class="feedback-button-wrapper">
+                      <button class="button modal-button" type="submit">Отправить</button>
+                  </div>
+                  
               </form>
               <button class="modal-close" type="button">Закрыть</button>
           </section>
