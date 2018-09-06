@@ -595,6 +595,7 @@ input[type="radio"].visually-hidden {
 .modal-login {
     display: none;
     position: relative;
+    z-index: 2;
 }
 
 
@@ -1743,6 +1744,7 @@ input[type="radio"].visually-hidden {
     padding-right: 13px;
     padding-bottom: 21px;
     padding-left: 13px; 
+    z-index: 2;
 
     width: 514px;
     
@@ -1760,6 +1762,7 @@ input[type="radio"].visually-hidden {
 
 .basket-full:hover .modal-basket {
     display: block;
+    z-index: 2;
 }
 
 .button-delete {
@@ -2003,6 +2006,7 @@ input[type="radio"].visually-hidden {
     
     background-color: transparent;
     background-image: url(../img/filter-button.svg);
+    background-repeat: no-repeat;
     
     border: 0;
     
