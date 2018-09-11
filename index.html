@@ -136,11 +136,11 @@
                                         <h2 class="visually-hidden">Личный кабинет</h2>
                                         <p>
                                             <label class="visually-hidden" for="login-email">Адрес электронной почты</label>
-                                            <input type="email" name="email" id="login-email" value="" placeholder="Электронная почта">
+                                            <input type="email" name="email" id="login-email" value="" placeholder="Электронная почта" required>
                                         </p>
                                         <p>
                                             <label class="visually-hidden" for="login-password">Введите пароль</label>
-                                            <input type="password" name="password" id="login-password" value="" placeholder="Пароль">
+                                            <input type="password" name="password" id="login-password" value="" placeholder="Пароль" required>
                                         </p>
                                         <div class="modal-login-wrapper">
                                             <button class="button" type="submit">Войти</button>
@@ -344,7 +344,7 @@
                                 <p class="dispatch-text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
                                 <p>
                                     <label for="appointment-email" class="visually-hidden">Ваша электронная почта:</label>
-                                    <input type="email" name="email" id="appointment-email" value="" placeholder="Электронная почта">
+                                    <input type="email" name="email" id="appointment-email" value="" placeholder="Электронная почта" required>
                                     <button class="button" type="submit">Отправить</button>
                                 </p>
                             </form>
@@ -369,9 +369,10 @@
                             </b>
                             <br> (с 10 до 20 ежедневно)
                         </p>
-                        <a class="button button-map" href="#">Форма обратной связи</a>
+                        <a class="button button-map" href="form.html">Форма обратной связи</a>
                     </div>
                 </div>
+                <iframe src="https://yandex.ru/map-widget/v1/-/CBBinAbUXB" width="1350" height="429" frameborder="1" allowfullscreen="true"></iframe>
             </section>
         </main>
 
@@ -466,6 +467,46 @@
 
     </div>
     <div class="modal-overlay"></div>
+    
+    <script>
+        var link = document.querySelector(".button-map");
+        var popup = document.querySelector(".modal-feedback");
+        var overlay = document.querySelector(".modal-overlay");
+        var close = document.querySelector(".modal-close");
+        var form = popup.querySelector(".feedback-form");
+        var name = popup.querySelector("[name=name]");
+        var email = popup.querySelector("[name=email]");
+        var message = popup.querySelector("[name=message]");
+        
+        link.addEventListener("click", function (evt) {
+            evt.preventDefault();
+            popup.classList.add("modal-feedback-show");
+            overlay.classList.add("modal-overlay-show");
+        });
+        
+        close.addEventListener("click", function (evt) {
+            evt.preventDefault();
+            popup.classList.remove("modal-feedback-show");
+            overlay.classList.remove("modal-overlay-show");
+        });
+        
+        form.addEventListener("submit", function (evt) {
+            if (!name.value || !email.value || !message.value) {
+                evt.preventDefault();
+                console.log("введите данные");
+            }
+        });
+        
+        window.addEventListener("keydown", function (evt) {
+            if (evt.keyCode === 27) {
+                if (popup.classList.contains("modal-feedback-show")) {
+                    evt.preventDefault();
+                    popup.classList.remove("modal-feedback-show");
+                    overlay.classList.remove("modal-overlay-show");
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
