@@ -1214,16 +1214,6 @@ input[type="radio"].visually-hidden {
 	background-image: url(../img/map.jpg);
 }
 
-/*
-.map iframe {
-    position: relative;
-	width: 100%;
-	min-height: 429px;
-    z-index: 2;
-    border: none;
-}
-*/
-
 .contacts-wrapper {
 	width: 1146px;
 	position: relative;
