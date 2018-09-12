@@ -961,7 +961,7 @@ input[type="radio"].visually-hidden {
 
 .ruble {
 	margin-top: -7px;
-	margin-left: -8px;
+	margin-left: 3px;
 	vertical-align: middle;
 }
 
@@ -1214,6 +1214,7 @@ input[type="radio"].visually-hidden {
 	background-image: url(../img/map.jpg);
 }
 
+/*
 .map iframe {
     position: relative;
 	width: 100%;
@@ -1221,6 +1222,7 @@ input[type="radio"].visually-hidden {
     z-index: 2;
     border: none;
 }
+*/
 
 .contacts-wrapper {
 	width: 1146px;
