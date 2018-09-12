@@ -372,7 +372,6 @@
                         <a class="button button-map" href="form.html">Форма обратной связи</a>
                     </div>
                 </div>
-                <iframe src="https://yandex.ru/map-widget/v1/-/CBBinAbUXB" width="1350" height="429" frameborder="1" allowfullscreen="true"></iframe>
             </section>
         </main>
 
@@ -468,45 +467,7 @@
     </div>
     <div class="modal-overlay"></div>
     
-    <script>
-        var link = document.querySelector(".button-map");
-        var popup = document.querySelector(".modal-feedback");
-        var overlay = document.querySelector(".modal-overlay");
-        var close = document.querySelector(".modal-close");
-        var form = popup.querySelector(".feedback-form");
-        var name = popup.querySelector("[name=name]");
-        var email = popup.querySelector("[name=email]");
-        var message = popup.querySelector("[name=message]");
-        
-        link.addEventListener("click", function (evt) {
-            evt.preventDefault();
-            popup.classList.add("modal-feedback-show");
-            overlay.classList.add("modal-overlay-show");
-        });
-        
-        close.addEventListener("click", function (evt) {
-            evt.preventDefault();
-            popup.classList.remove("modal-feedback-show");
-            overlay.classList.remove("modal-overlay-show");
-        });
-        
-        form.addEventListener("submit", function (evt) {
-            if (!name.value || !email.value || !message.value) {
-                evt.preventDefault();
-                console.log("введите данные");
-            }
-        });
-        
-        window.addEventListener("keydown", function (evt) {
-            if (evt.keyCode === 27) {
-                if (popup.classList.contains("modal-feedback-show")) {
-                    evt.preventDefault();
-                    popup.classList.remove("modal-feedback-show");
-                    overlay.classList.remove("modal-overlay-show");
-                }
-            }
-        });
-    </script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
