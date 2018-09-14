@@ -1005,6 +1005,7 @@ input[type="radio"].visually-hidden {
 
 .product-hover .button {
 	position: absolute;
+    left: 50%;
 	bottom: 21px;
 	padding-left: 16px;
 	padding-right: 17px;
@@ -1750,6 +1751,7 @@ input[type="radio"].visually-hidden {
 	font-size: 0;
 	background-color: transparent;
 	background-image: url(../img/cross-small.svg);
+    background-repeat: no-repeat;
 	border: 0;
 	cursor: pointer;
 }
@@ -1818,7 +1820,7 @@ input[type="radio"].visually-hidden {
 }
 
 .filters {
-	margin-bottom: 23px;
+	margin-bottom: 25px;
 }
 
 .filter {
@@ -1832,7 +1834,7 @@ input[type="radio"].visually-hidden {
 	line-height: 18px;
 	font-weight: 500;
 	margin-right: 17px;
-	margin-bottom: 17px;
+	margin-bottom: 15px;
 	margin-left: 0;
 	padding: 0;
 	border: none;
@@ -1847,13 +1849,15 @@ input[type="radio"].visually-hidden {
 }
 
 .select-item {
+    height: 36px;
 	padding-top: 6px;
-	padding-right: 32px;
+	padding-right: 34px;
 	padding-bottom: 8px;
 	padding-left: 15px;
 	font-weight: 600;
 	color: #ffffff;
 	background-color: rgba(255, 255, 255, 0.2);
+    border: none;
 	border-radius: 18px;
 	appearance: none;
 	-webkit-appearance: none;
@@ -1885,6 +1889,10 @@ input[type="radio"].visually-hidden {
 	background-image: url(../img/icon-down-dir-dark.svg);
 }
 
+select::-ms-expand {
+    display: none;
+}
+
 .range-price {
 	padding: 0;
 	margin: 0;
@@ -1896,9 +1904,14 @@ input[type="radio"].visually-hidden {
 }
 
 .range {
-	padding: 15px 21px;
+    height: 36px;
+	padding-top: 16px;
+    padding-right: 24px;
+    padding-bottom: 15px;
+    padding-left: 20px;
 	background-color: rgba(255, 255, 255, 0.2);
 	border-radius: 18px;
+    box-sizing: border-box;
 }
 
 .range-line {
@@ -1953,10 +1966,10 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-radio {
+    height: 27px;
 	margin: 0;
 	padding-top: 8px;
 	padding-right: 18px;
-	padding-bottom: 7px;
 	padding-left: 13px;
 	background-color: rgba(255, 255, 255, 0.2);
 	border-radius: 18px;
@@ -2012,11 +2025,11 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-checkbox {
+    height: 27px;
 	margin: 0;
 	margin-right: -4px;
 	padding-top: 7px;
 	padding-right: 19px;
-	padding-bottom: 10px;
 	padding-left: 15px;
 	background-color: rgba(255, 255, 255, 0.2);
 	border-radius: 18px;
